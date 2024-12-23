@@ -6,11 +6,13 @@ import Home from "./routes/Home";
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="font-serif min-h-dvh">
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

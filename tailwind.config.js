@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'serif': '"Inconsolata", serif',
+      },
+      backgroundImage: {
+        'squiggly-line-top': "url(`pattern-squiggly-line-top.svg`)",
+        'text': "url('logo-mark.svg')",
+      }
+    },
   },
   plugins: [],
 }

@@ -1,9 +1,10 @@
 
+import Hero from "../components/Hero";
 
 const Home = () => {
     return (
-        <div className="h-dvh bg-black flex items-center justify-center text-white">
-            <div className="font-bold text-xl">Home</div>
+        <div className="h-dvh bg-slate-900 px-2 py-6 flex flex-col items-center justify-start text-white">
+            <Hero />
         </div>
     );
 }
