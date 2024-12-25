@@ -31,6 +31,7 @@ export default {
         'inconsolata': ["Inconsolata", "monospace"],
       },
       colors: {
+        'faded-white': "rgba(255, 255, 255, 0.08)",
         neutral: {
           900: "#0D082D",
           700: "#4B4869",

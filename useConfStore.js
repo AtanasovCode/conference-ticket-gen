@@ -1,6 +1,6 @@
 import { create } from "zustand" 
 
-export const useStore = create((set) => ({
+export const useConfStore = create((set) => ({
   profilePhoto: "",
   setProfilePhoto: (profilePhoto) => set({ profilePhoto }),
   fullName: "",
