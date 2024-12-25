@@ -3,13 +3,16 @@ import logo from '../assets/images/logo-full.svg';
 const Hero = () => {
     return (
         <div className="flex flex-col items-center justify-center relative gap-12">
-            <div className="absolute top-0 right-0 w-full h-[50%] bg-test"></div>
             <div className="">
                 <img src={logo} alt="logo" className="w-full" />
             </div>
-            <div className="w-full flex flex-col items-center justify-center gap-6">
-                <div className="font-extrabold text-3xl text-center">Your Journey to Coding Conf 2025 Starts Here!</div>
-                <p className="text-center">Secure your spot at next year’s biggest coding conference.</p>
+            <div className="w-full flex flex-col items-center justify-center gap-6 text-center">
+                <div className="text-preset-1-mobile text-neutral-0 font-extrabold md:text-preset-1">
+                    Your Journey to Coding Conf 2025 Starts Here!
+                </div>
+                <p className="text-preset-4-mobile text-neutral-300 font-medium md:text-preset-4">
+                    Secure your spot at next year’s biggest coding conference.
+                </p>
             </div>
         </div>
     );

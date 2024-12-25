@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 const Home = () => {
     return (
-        <div className="h-dvh bg-slate-900 px-2 py-6 flex flex-col items-center justify-start text-white">
+        <div className="h-dvh bg-neutral-900 py-12 flex flex-col items-center justify-start text-neutral-0">
             <Hero />
         </div>
     );

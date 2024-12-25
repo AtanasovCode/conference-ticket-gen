@@ -8,7 +8,7 @@ export default {
     extend: {
       fontSize: {
         'preset-1': ["3.75rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 60px
-        'preset-1-mobile': ["3.75rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 60px
+        'preset-1-mobile': ["2rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 60px
         'preset-2': ["2.5rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 40px
         'preset-2-mobile': ["1.5rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 24px
         'preset-3': ["1.875rem", { lineHeight: "110%", letterSpacing: "-0.0625rem" }], // 30px
@@ -28,7 +28,7 @@ export default {
         regular: "400",
       },
       fontFamily: {
-        inconsolata: ["Inconsolata", "monospace"],
+        'inconsolata': ["Inconsolata", "monospace"],
       },
       colors: {
         neutral: {
