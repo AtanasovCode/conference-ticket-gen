@@ -6,17 +6,20 @@ import TextInput from "./TextInput";
 const Inputs = () => {
 
     const {
+        fullName,
+        email,
+        githubUsername,
         setFullName,
         setEmail,
         setGithubUsername,
     } = useConfStore();
 
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-12 lg:w-[65%]">
+        <div className="w-full flex flex-col items-center justify-center gap-10">
             <PhotoInput />
-            <TextInput name="Full Name" updateValue={setFullName} />
-            <TextInput name="Email Address" updateValue={setEmail} />
-            <TextInput name="Github Username" updateValue={setGithubUsername} />
+            <TextInput name="Full Name" value={fullName} updateValue={setFullName} />
+            <TextInput name="Email Address" value={email} updateValue={setEmail} />
+            <TextInput name="Github Username" value={githubUsername} updateValue={setGithubUsername} />
         </div>
     );
 }
