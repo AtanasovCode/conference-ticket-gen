@@ -74,6 +74,11 @@ export default {
       },
       backgroundImage: {
         'gradient-01': "linear-gradient(90deg, #F37362 0%, #FFF 100%)",
+
+        // background images
+        'squiggly-line-top': "url('pattern-squiggly-line-top.svg')",
+        'squiggly-line-bottom': "url('pattern-squiggly-line-bottom.svg')",
+
       },
     },
   },
