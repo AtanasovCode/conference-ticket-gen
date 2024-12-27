@@ -9,4 +9,7 @@ export const useConfStore = create((set) => ({
   setEmail: (email) => set({ email }),
   githubUsername: "",
   setGithubUsername: (githubUsername) => set({ githubUsername }),
+
+  loading: false,
+  setLoading: (loading) => set({ loading }),
 }))

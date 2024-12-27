@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 // routes
 import Home from "./routes/Home";
+import TicketResult from "./routes/TicketResult";
 
 const Router = () => {
   return (
@@ -11,6 +12,7 @@ const Router = () => {
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />
+            <Route path="/ticket" element={<TicketResult />} />
           </Routes>
         </BrowserRouter>
       </div>
