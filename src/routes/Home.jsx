@@ -58,11 +58,6 @@ const Home = () => {
                     />
                 </div>
             </div>
-
-            {/* Decorative Patterns */}
-            <div className="absolute top-[5%] right-0 w-32 md:w-[32%] md:top-[10%]">
-                <img src={squigglyLineTop} alt="" className="w-full" />
-            </div>
         </div>
     );
 }

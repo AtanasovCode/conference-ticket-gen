@@ -78,6 +78,7 @@ export default {
         // background images
         'squiggly-line-top': "url('pattern-squiggly-line-top.svg')",
         'squiggly-line-bottom': "url('pattern-squiggly-line-bottom.svg')",
+        'ticket': "url('pattern-ticket.svg')",
 
       },
     },
