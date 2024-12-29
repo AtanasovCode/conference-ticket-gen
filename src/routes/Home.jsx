@@ -1,6 +1,6 @@
 import { useConfStore } from '../../useConfStore';
 import { useNavigate } from 'react-router';
-import squigglyLineTop from '../assets/images/pattern-squiggly-line-top.svg';
+import Loading from '../components/Loading';
 
 // Components
 import Hero from "../components/Hero";

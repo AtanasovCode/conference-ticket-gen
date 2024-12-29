@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router";
+import { useConfStore } from "../useConfStore";
 import squigglyLineTop from './assets/images/pattern-squiggly-line-top.svg';
 import squigglyLineBottom from './assets/images/pattern-squiggly-line-bottom.svg';
 
@@ -7,7 +8,12 @@ import squigglyLineBottom from './assets/images/pattern-squiggly-line-bottom.svg
 import Home from "./routes/Home";
 import TicketResult from "./routes/TicketResult";
 
+import Loading from "./components/Loading";
+
 const Router = () => {
+
+  const { loading } = useConfStore();
+
   return (
     <div className="
       font-inconsolata relative text-neutral-0 min-h-dvh bg-dark-900
@@ -16,6 +22,7 @@ const Router = () => {
       bg-background-mobile bg-no-repeat bg-bottom bg-contain
       md:bg-background-tablet lg:bg-background-desktop
     ">
+      { loading && <Loading /> }
       <div className="w-full lg:pb-0 sm:w-[90%] lg:w-[60%]">
         <BrowserRouter>
           <Routes>

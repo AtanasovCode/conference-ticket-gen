@@ -32,6 +32,7 @@ export default {
       },
       colors: {
         'faded-white': "rgba(255, 255, 255, 0.08)",
+        'transparent-black': "rgba(0, 0, 0, .6)",
         'dark-900': "#020114",
         neutral: {
           700: "#4B4869",
@@ -84,6 +85,16 @@ export default {
         'ticket': "url('pattern-ticket.svg')",
 
       },
+    },
+    animation: {
+      'dot-load': "dot-load 1.5s ease-in-out infinite alternate",
+    },
+    keyframes: {
+      'dot-load': {
+        '0%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(30px)' },
+        '100%': { transform: 'translateY(-30px)' },
+      }
     },
   },
   plugins: [],
