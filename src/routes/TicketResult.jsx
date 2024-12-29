@@ -14,7 +14,7 @@ const TicketResult = () => {
     const nameParts = fullName.split("  ");
 
     return (
-        <div className="min-h-dvh p-4 bg-neutral-900 py-12 flex flex-col items-center justify-start text-neutral-0 gap-6">
+        <div className="min-h-dvh w-full p-4 bg-neutral-900 py-12 flex flex-col items-center justify-start text-neutral-0 gap-20">
             <div className="flex flex-col items-center justify-center relative gap-12 w-full">
                 <div className="">
                     <img src={logo} alt="logo" className="w-full" />
@@ -31,6 +31,8 @@ const TicketResult = () => {
                         We've emailed your ticket to {email} and will send updates in the run up to the event.
                     </p>
                 </div>
+            </div>
+            <div className="w-full flex items-center justify-center">
                 <Ticket />
             </div>
         </div>
