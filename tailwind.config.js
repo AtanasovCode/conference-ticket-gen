@@ -32,8 +32,8 @@ export default {
       },
       colors: {
         'faded-white': "rgba(255, 255, 255, 0.08)",
+        'dark-900': "#020114",
         neutral: {
-          900: "#0D082D",
           700: "#4B4869",
           500: "#8784A5",
           300: "#D1D0D5",
@@ -76,6 +76,9 @@ export default {
         'gradient-01': "linear-gradient(90deg, #F37362 0%, #FFF 100%)",
 
         // background images
+        'background-mobile': "url('background-mobile.png')",
+        'background-tablet': "url('background-tablet.png')",
+        'background-desktop': "url('background-desktop.png')",
         'squiggly-line-top': "url('pattern-squiggly-line-top.svg')",
         'squiggly-line-bottom': "url('pattern-squiggly-line-bottom.svg')",
         'ticket': "url('pattern-ticket.svg')",

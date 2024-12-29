@@ -2,7 +2,7 @@ import logo from '../assets/images/logo-full.svg';
 
 const Hero = () => {
     return (
-        <div className="flex flex-col items-center justify-center relative gap-12 w-full">
+        <div className="flex flex-col items-center justify-center relative gap-10 w-full">
             <div className="w-48 lg:w-60">
                 <img src={logo} alt="logo" className="w-full" />
             </div>

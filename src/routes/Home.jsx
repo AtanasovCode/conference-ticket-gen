@@ -36,9 +36,9 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-dvh flex flex-col items-center justify-start text-neutral-0 gap-20">
+        <div className="min-h-dvh flex flex-col items-center justify-start text-neutral-0 gap-8 z-50">
             <Hero />
-            <div className="flex flex-col items-center justify-center w-full lg:w-[60%] gap-10">
+            <div className="flex flex-col items-center justify-center w-full lg:w-[60%] gap-6">
                 <Inputs />
                 <div className="w-full flex items-center justify-center">
                     <input
@@ -51,7 +51,7 @@ const Home = () => {
                     <input
                         type="button"
                         value="Generate Example Ticket"
-                        className="w-full rounded-radius-12 text-center cursor-pointer bg-slate-800 border border-orange-500 text-preset-5-extrabold font-extrabold text-neutral-300 p-6"
+                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-slate-800 border border-orange-500 text-preset-5-extrabold font-extrabold text-neutral-300 p-6"
                         onClick={() => {
                             generateExampleTicket();
                         }}

@@ -14,7 +14,7 @@ const TicketResult = () => {
     const nameParts = fullName.split("  ");
 
     return (
-        <div className="min-h-dvh w-full flex flex-col items-center justify-start gap-20">
+        <div className="min-h-dvh w-full flex flex-col items-center justify-start gap-20 z-50">
             <div className="flex flex-col items-center justify-center relative gap-12 w-full">
                 <div className="">
                     <img src={logo} alt="logo" className="w-full" />

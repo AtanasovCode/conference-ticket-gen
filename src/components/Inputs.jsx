@@ -15,7 +15,7 @@ const Inputs = () => {
     } = useConfStore();
 
     return (
-        <div className="w-full flex flex-col items-center justify-center gap-10">
+        <div className="w-full flex flex-col items-center justify-center gap-10 z-50">
             <PhotoInput />
             <TextInput name="Full Name" value={fullName} updateValue={setFullName} />
             <TextInput name="Email Address" value={email} updateValue={setEmail} />
