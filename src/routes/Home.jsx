@@ -36,7 +36,7 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-dvh p-4 bg-neutral-900 py-12 flex flex-col items-center justify-start text-neutral-0 gap-20">
+        <div className="min-h-dvh flex flex-col items-center justify-start text-neutral-0 gap-20">
             <Hero />
             <div className="flex flex-col items-center justify-center w-full lg:w-[60%] gap-10">
                 <Inputs />
