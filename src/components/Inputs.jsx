@@ -22,10 +22,31 @@ const Inputs = () => {
 
     return (
         <div className="w-full flex flex-col items-center justify-center gap-10 z-50">
-            <PhotoInput />
-            <TextInput name="Full Name" value={fullName} updateValue={setFullName} />
-            <TextInput name="Email Address" value={email} updateValue={setEmail} />
-            <TextInput name="Github Username" value={githubUsername} updateValue={setGithubUsername} />
+            <PhotoInput
+                err={photoErr}
+                errMsg="Please upload a valid photo."
+            />
+            <TextInput
+                name="Full Name"
+                value={fullName}
+                updateValue={setFullName}
+                err={nameErr}
+                errMsg="Full Name is required."
+            />
+            <TextInput
+                name="Email Address"
+                value={email}
+                updateValue={setEmail}
+                err={emailErr}
+                errMsg="Please enter a valid email address."
+            />
+            <TextInput
+                name="Github Username"
+                value={githubUsername}
+                updateValue={setGithubUsername}
+                err={githubErr}
+                errMsg="Please provide a valid GitHub username."
+            />
         </div>
     );
 }
