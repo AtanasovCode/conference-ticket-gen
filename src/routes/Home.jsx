@@ -16,6 +16,16 @@ const Home = () => {
         setEmail,
         setGithubUsername,
         setLoading,
+
+        fullName,
+        email,
+        githubUsername,
+        profilePhoto,
+
+        // errors
+        setNameErr,
+        setEmailErr,
+        setGithubErr,
     } = useConfStore();
 
     const generateExampleTicket = () => {
@@ -35,6 +45,15 @@ const Home = () => {
         }, 1800);
     };
 
+    const checkInputs = () => {
+
+        console.log("CLICK");
+
+        if (fullName === "") setNameErr(true);
+        if (email === "") setEmailErr(true);
+        if (githubUsername === "") setGithubErr(true);
+    }
+
     return (
         <div className="min-h-dvh flex flex-col items-center justify-start text-neutral-0 gap-8 z-50">
             <Hero />
@@ -44,7 +63,8 @@ const Home = () => {
                     <input
                         type="button"
                         value="Generate Ticket"
-                        className="w-full rounded-radius-12 text-center cursor-pointer bg-orange-500 text-preset-5-extrabold font-extrabold text-neutral-900 p-6"
+                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-orange-500 text-preset-5-extrabold font-extrabold text-neutral-900 p-6"
+                        onClick={() => checkInputs()}
                     />
                 </div>
                 <div className="w-full flex items-center justify-center">

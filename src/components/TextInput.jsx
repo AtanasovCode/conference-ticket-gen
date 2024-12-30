@@ -21,9 +21,9 @@ const TextInput = ({
                     className="w-full bg-faded-white rounded-radius-12 border border-neutral-500 p-4"
                 />
                 {
-                    !err &&
+                    err &&
                     <div className="flex items-center justify-start gap-4 mt-2">
-                        <img src={iconInfo} alt="info icon" className="w-6" />
+                        <img src={iconInfo} alt="info icon" className="w-4" />
                         <p className="text-orange-500 text-preset-7">
                             {errMsg}
                         </p>

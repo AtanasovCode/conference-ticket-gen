@@ -9,17 +9,17 @@ export const useConfStore = create((set) => ({
   fullName: "",
   setFullName: (fullName) => set({ fullName }),
   nameErr: false,
-  setNameErr: (value) => set({ photoErr: value }),
+  setNameErr: (value) => set({ nameErr: value }),
 
   email: "",
   setEmail: (email) => set({ email }),
   emailErr: false,
-  setEmailErr: (value) => set({ photoErr: value }),
+  setEmailErr: (value) => set({ emailErr: value }),
   
   githubUsername: "",
   setGithubUsername: (githubUsername) => set({ githubUsername }),
   githubErr: false,
-  setGithubErr: (value) => set({ photoErr: value }),
+  setGithubErr: (value) => set({ githubErr: value }),
 
   loading: false,
   setLoading: (loading) => set({ loading }),
