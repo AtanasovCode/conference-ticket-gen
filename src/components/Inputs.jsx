@@ -12,6 +12,12 @@ const Inputs = () => {
         setFullName,
         setEmail,
         setGithubUsername,
+
+        // errors
+        nameErr,
+        photoErr,
+        emailErr,
+        githubErr,
     } = useConfStore();
 
     return (

@@ -1,5 +1,3 @@
-
-
 const TextInput = ({
     name,
     value,
@@ -10,12 +8,14 @@ const TextInput = ({
             <div className="text-preset-5">
                 {name}
             </div>
-            <input
-                type="text"
-                value={value}
-                onChange={(e) => {updateValue(e.currentTarget.value)}}
-                className="w-full bg-faded-white rounded-radius-12 border border-neutral-500 p-4"
-            />
+            <div className="relative w-full focus-within:border-red-500 transition-transform">
+                <input
+                    type="text"
+                    value={value}
+                    onChange={(e) => { updateValue(e.currentTarget.value) }}
+                    className="w-full bg-faded-white rounded-radius-12 border border-neutral-500 p-4"
+                />
+            </div>
         </div>
     );
 }

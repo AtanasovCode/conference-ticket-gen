@@ -19,7 +19,7 @@ const Router = () => {
       font-inconsolata relative text-neutral-0 min-h-dvh bg-dark-900
       px-4 pt-12 pb-20
       flex items-center justify-center overflow-x-hidden
-      bg-background-mobile bg-no-repeat bg-bottom bg-contain
+      bg-background-mobile bg-no-repeat bg-right bg-contain
       md:bg-background-tablet lg:bg-background-desktop
     ">
       { loading && <Loading /> }

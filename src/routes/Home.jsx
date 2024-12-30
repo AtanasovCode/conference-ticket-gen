@@ -32,7 +32,7 @@ const Home = () => {
         setTimeout(() => {
             setLoading(false);
             navigate("/ticket");
-        }, 1500);
+        }, 1800);
     };
 
     return (
