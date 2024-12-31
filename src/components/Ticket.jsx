@@ -30,7 +30,11 @@ const Ticket = () => {
                 </div>
                 <div className="flex items-stretch justify-center gap-4">
                     <div className="w-12 flex items-center justify-center overflow-hidden rounded-radius-12 md:w-14 lg:w-20">
-                        <img src={profilePhoto} alt="avatar photo" className="w-full" />
+                        <img
+                            src={profilePhoto instanceof File ? URL.createObjectURL(profilePhoto) : profilePhoto}
+                            alt="avatar photo"
+                            className="w-full"
+                        />
                     </div>
                     <div className="flex flex-col items-start justify-around">
                         <div className="text-preset-4-mobile md:text-preset-3">
