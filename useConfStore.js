@@ -5,6 +5,8 @@ export const useConfStore = create((set) => ({
   setProfilePhoto: (profilePhoto) => set({ profilePhoto }),
   photoErr: false,
   setPhotoErr: (value) => set({ photoErr: value }),
+  photoTooLarge: false,
+  setPhotoTooLarge: (value) => set({ photoTooLarge: value }),
 
   fullName: "",
   setFullName: (fullName) => set({ fullName }),
