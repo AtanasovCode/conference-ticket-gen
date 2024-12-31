@@ -12,7 +12,7 @@ const Ticket = () => {
     } = useConfStore();
 
     return (
-        <div className="relative w-full flex items-center justify-center max-w-[45rem] aspect-[600/280.4]">
+        <div className="relative w-full flex items-center justify-center max-w-[35rem] aspect-[600/280.4]">
             <img
                 src={ticketbg}
                 alt="ticket background"
@@ -29,7 +29,7 @@ const Ticket = () => {
                     </div>
                 </div>
                 <div className="flex items-stretch justify-center gap-4">
-                    <div className="w-12 flex items-center justify-center overflow-hidden rounded-radius-12 md:w-14 lg:w-20">
+                    <div className="w-12 flex items-center justify-center overflow-hidden rounded-radius-12 md:w-14 lg:w-16">
                         <img
                             src={profilePhoto instanceof File ? URL.createObjectURL(profilePhoto) : profilePhoto}
                             alt="avatar photo"

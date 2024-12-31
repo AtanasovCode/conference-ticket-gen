@@ -31,11 +31,30 @@ const AddedPhoto = () => {
                     className="bg-faded-white border-none p-3 rounded-radius-4 cursor-pointer"
                     onClick={() => removeImage()}
                 />
-                <input
-                    type="button"
-                    value="Change Image"
-                    className="bg-faded-white border-none p-3 rounded-radius-4 cursor-pointer"
-                />
+                <div className="relative p-3 rounded-radius-4 cursor-pointer bg-faded-white">
+                    <input
+                        type="button"
+                        value="Change Image"
+                        className="w-full border-none"
+                    />
+                    <input
+                        type="file"
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                        accept=".jpg,.jpeg,.png,.webp"
+                        onChange={(e) => {
+                            const file = e.target.files[0]; // Get the selected file
+                            if (file) {
+                                const maxSizeInBytes = 500 * 1024; // 500kb in bytes
+                                if (file.size > maxSizeInBytes) {
+                                    setPhotoTooLarge(true);
+                                    e.target.value = ""; // Clear the input
+                                } else {
+                                    setProfilePhoto(file);
+                                }
+                            }
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );
