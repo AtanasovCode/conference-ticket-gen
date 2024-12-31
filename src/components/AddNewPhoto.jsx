@@ -14,10 +14,9 @@ const AddNewPhoto = () => {
     return (
         <div className="w-full">
             <div
-                className="
-                w-full relative bg-faded-white border-2 border-dashed border-neutral-500 rounded-radius-12 
-                flex flex-col items-center justify-center gap-4 p-6
-            ">
+                className="w-full relative bg-faded-white border-2 border-dashed border-neutral-500 rounded-radius-12 
+                flex flex-col items-center justify-center gap-4 p-6"
+            >
                 <input
                     type="file"
                     className="absolute w-full h-full opacity-0"
