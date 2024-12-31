@@ -23,10 +23,24 @@ const Home = () => {
         profilePhoto,
 
         // errors
+        nameErr,
+        emailErr,
+        githubErr,
+        photoErr,
         setNameErr,
         setEmailErr,
         setGithubErr,
     } = useConfStore();
+
+    const goToTicketPage = () => {
+        if (!nameErr && !emailErr && !githubErr && !photoErr) {
+            setLoading(true);
+            setTimeout(() => {
+                setLoading(false);
+                navigate("/ticket");
+            }, 1800);
+        }
+    };
 
     const generateExampleTicket = () => {
         setFullName("Jonatan Kristof");
@@ -37,18 +51,7 @@ const Home = () => {
         goToTicketPage();
     };
 
-    const goToTicketPage = () => {
-        setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-            navigate("/ticket");
-        }, 1800);
-    };
-
     const checkInputs = () => {
-
-        console.log("CLICK");
-
         if (fullName === "") setNameErr(true);
         if (email === "") setEmailErr(true);
         if (githubUsername === "") setGithubErr(true);
