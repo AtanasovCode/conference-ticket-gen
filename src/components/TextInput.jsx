@@ -1,5 +1,4 @@
-import iconInfo from '../assets/images/icon-info.svg';
-
+import ErrorMessage from "./ErrorMessage";
 
 const TextInput = ({
     name,
@@ -8,27 +7,22 @@ const TextInput = ({
     err,
     errMsg,
 }) => {
+
+    const borderColor = err ? "border-orange-500" : "border-neutral-500";
+
     return (
         <div className="w-full flex flex-col items-start justify-center gap-4">
             <div className="text-preset-5">
                 {name}
             </div>
-            <div className="relative w-full focus-within:border-red-500 transition-transform">
+            <div className="relative w-full">
                 <input
                     type="text"
                     value={value}
                     onChange={(e) => { updateValue(e.currentTarget.value) }}
-                    className="w-full bg-faded-white rounded-radius-12 border border-neutral-500 p-4"
+                    className={`w-full bg-faded-white rounded-radius-12 border ${borderColor} p-4`}
                 />
-                {
-                    err &&
-                    <div className="flex items-center justify-start gap-4 mt-2">
-                        <img src={iconInfo} alt="info icon" className="w-4" />
-                        <p className="text-orange-500 text-preset-7">
-                            {errMsg}
-                        </p>
-                    </div>
-                }
+                {err && <ErrorMessage message={errMsg} />}
             </div>
         </div>
     );

@@ -2,10 +2,11 @@ import { useConfStore } from "../../useConfStore";
 import upload from '../assets/images/icon-upload.svg';
 import info from '../assets/images/icon-info.svg';
 
+import ErrorMessage from "./ErrorMessage";
+
 const AddNewPhoto = () => {
 
     const {
-        profilePhoto,
         setProfilePhoto,
         photoTooLarge,
         setPhotoTooLarge,
@@ -13,11 +14,13 @@ const AddNewPhoto = () => {
         setPhotoErr,
     } = useConfStore();
 
+    const borderColor = photoTooLarge || photoErr ? "border-orange-500" : "border-neutral-500";
+
     return (
         <div className="w-full">
             <div
-                className="w-full relative bg-faded-white border-2 border-dashed border-neutral-500 rounded-radius-12 
-                flex flex-col items-center justify-center gap-4 p-6"
+                className={`w-full relative bg-faded-white border-2 border-dashed ${borderColor} rounded-radius-12 
+                flex flex-col items-center justify-center gap-4 p-6`}
             >
                 <input
                     type="file"
@@ -44,29 +47,21 @@ const AddNewPhoto = () => {
                     Drag and drop or click to upload
                 </label>
             </div>
-            <div className="w-full text-preset-7 text-neutral-300 mt-2">
-                {
-                    !photoTooLarge && !photoErr ? (
-                        <div className="flex items-center justify-start gap-2">
-                            <span><img src={info} alt="info icon" className="w-6" /></span>
-                            <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
-                        </div>
+            {
+                !photoTooLarge && !photoErr ? (
+                    <div className="flex items-center justify-start gap-2">
+                        <span><img src={info} alt="info icon" className="w-5" /></span>
+                        <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+                    </div>
+                ) : (
+                    photoTooLarge ? (
+                        <ErrorMessage message="File too large. Please upload a photo under 500KB." />
                     ) : (
-                        photoTooLarge ? (
-                            <div className="flex items-center justify-start gap-2">
-                                <span><img src={info} alt="info icon" className="w-6" /></span>
-                                <span>Please upload a photo that is less than 500kb</span>
-                            </div>
-                        ) : (
-                            <div className="flex items-center justify-start gap-2">
-                                <span><img src={info} alt="info icon" className="w-6" /></span>
-                                <span>Please upload an avatar</span>
-                            </div>
-                        )
+                        <ErrorMessage message="Missing required field: Upload Avatar." />
                     )
-                }
-            </div>
-        </div>
+                )
+            }
+        </div >
     );
 }
 
