@@ -14,12 +14,12 @@ const AddedPhoto = () => {
     return (
         <div className="w-full relative bg-faded-white border-2 border-dashed border-neutral-500 rounded-radius-12 
                 flex flex-col items-center justify-center gap-4 p-6">
-            <div className="flex items-center justify-center overflow-hidden rounded-radius-12">
+            <div className="flex items-center justify-center overflow-hidden rounded-radius-4">
                 {profilePhoto && (
                     <img
                         src={profilePhoto instanceof File ? URL.createObjectURL(profilePhoto) : profilePhoto}
                         alt="Uploaded preview"
-                        className="w-24 h-24 object-cover rounded-full"
+                        className="w-16"
                     />
                 )}
 

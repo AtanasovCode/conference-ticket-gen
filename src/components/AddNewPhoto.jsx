@@ -35,6 +35,7 @@ const AddNewPhoto = () => {
                                 e.target.value = ""; // Clear the input
                             } else {
                                 setPhotoErr(false);
+                                setPhotoTooLarge(false);
                                 setProfilePhoto(file);
                             }
                         }
@@ -49,7 +50,7 @@ const AddNewPhoto = () => {
             </div>
             {
                 !photoTooLarge && !photoErr ? (
-                    <div className="flex items-center justify-start gap-2">
+                    <div className="flex items-center justify-start gap-2 mt-2 text-neutral-300 text-preset-7">
                         <span><img src={info} alt="info icon" className="w-5" /></span>
                         <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
                     </div>
