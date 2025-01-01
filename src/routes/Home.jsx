@@ -27,25 +27,18 @@ const Home = () => {
         emailErr,
         githubErr,
         photoErr,
+        setPhotoErr,
         setNameErr,
         setEmailErr,
         setGithubErr,
     } = useConfStore();
 
     const goToTicketPage = () => {
-        try {
-            checkInputs();
-        } catch (err) {
-            console.log(err.msg);
-        } finally {
-            if (!nameErr && !emailErr && !githubErr && !photoErr) {
-                setLoading(true);
-                setTimeout(() => {
-                    setLoading(false);
-                    navigate("/ticket");
-                }, 1800);
-            }
-        }
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            navigate("/ticket");
+        }, 1800);
     };
 
     const generateExampleTicket = () => {
@@ -58,9 +51,14 @@ const Home = () => {
     };
 
     const checkInputs = () => {
+        if (profilePhoto === "") setPhotoErr(true);
         if (fullName === "") setNameErr(true);
         if (email === "") setEmailErr(true);
         if (githubUsername === "") setGithubErr(true);
+
+        if (profilePhoto !== "" && fullName !== "" && githubUsername !== "" && email !== "") {
+            goToTicketPage();
+        }
     }
 
     return (
@@ -73,7 +71,7 @@ const Home = () => {
                         type="button"
                         value="Generate Ticket"
                         className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-orange-500 text-preset-5-extrabold font-extrabold text-neutral-900 p-6"
-                        onClick={() => goToTicketPage()}
+                        onClick={() => checkInputs()}
                     />
                 </div>
                 <div className="w-full flex items-center justify-center">

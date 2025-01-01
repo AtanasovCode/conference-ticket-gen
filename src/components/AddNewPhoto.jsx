@@ -8,7 +8,9 @@ const AddNewPhoto = () => {
         profilePhoto,
         setProfilePhoto,
         photoTooLarge,
-        setPhotoTooLarge
+        setPhotoTooLarge,
+        photoErr,
+        setPhotoErr,
     } = useConfStore();
 
     return (
@@ -29,6 +31,7 @@ const AddNewPhoto = () => {
                                 setPhotoTooLarge(true);
                                 e.target.value = ""; // Clear the input
                             } else {
+                                setPhotoErr(false);
                                 setProfilePhoto(file);
                             }
                         }
@@ -41,9 +44,27 @@ const AddNewPhoto = () => {
                     Drag and drop or click to upload
                 </label>
             </div>
-            <div className="w-full text-preset-7 text-neutral-300 flex items-center justify-start gap-2 mt-2">
-                <span><img src={info} alt="info icon" className="w-6" /></span>
-                <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+            <div className="w-full text-preset-7 text-neutral-300 mt-2">
+                {
+                    !photoTooLarge && !photoErr ? (
+                        <div className="flex items-center justify-start gap-2">
+                            <span><img src={info} alt="info icon" className="w-6" /></span>
+                            <span>Upload your photo (JPG or PNG, max size: 500KB).</span>
+                        </div>
+                    ) : (
+                        photoTooLarge ? (
+                            <div className="flex items-center justify-start gap-2">
+                                <span><img src={info} alt="info icon" className="w-6" /></span>
+                                <span>Please upload a photo that is less than 500kb</span>
+                            </div>
+                        ) : (
+                            <div className="flex items-center justify-start gap-2">
+                                <span><img src={info} alt="info icon" className="w-6" /></span>
+                                <span>Please upload an avatar</span>
+                            </div>
+                        )
+                    )
+                }
             </div>
         </div>
     );
