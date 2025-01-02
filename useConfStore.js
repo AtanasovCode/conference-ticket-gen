@@ -17,6 +17,8 @@ export const useConfStore = create((set) => ({
   setEmail: (email) => set({ email }),
   emailErr: false,
   setEmailErr: (value) => set({ emailErr: value }),
+  invalidEmailErr: false,
+  setInvalidEmailErr: (value) => set({ invalidEmailErr: value }),
   
   githubUsername: "",
   setGithubUsername: (githubUsername) => set({ githubUsername }),

@@ -17,6 +17,7 @@ const Inputs = () => {
         nameErr,
         photoErr,
         emailErr,
+        invalidEmailErr,
         githubErr,
     } = useConfStore();
 
@@ -38,6 +39,7 @@ const Inputs = () => {
                 value={email}
                 updateValue={setEmail}
                 err={emailErr}
+                invalidEmailErr={invalidEmailErr}
                 errMsg="Please enter a valid email address."
             />
             <TextInput

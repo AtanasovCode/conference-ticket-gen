@@ -5,6 +5,7 @@ const TextInput = ({
     value,
     updateValue,
     err,
+    invalidEmailErr,
     errMsg,
 }) => {
 
@@ -17,12 +18,13 @@ const TextInput = ({
             </div>
             <div className="relative w-full">
                 <input
-                    type="text"
+                    type={name === "Email Address" ? "email" : "text"}
                     value={value}
                     onChange={(e) => { updateValue(e.currentTarget.value) }}
                     className={`w-full bg-faded-white rounded-radius-12 border ${borderColor} p-4`}
                 />
                 {err && <ErrorMessage message={errMsg} />}
+                {invalidEmailErr && <ErrorMessage message={errMsg} />}
             </div>
         </div>
     );

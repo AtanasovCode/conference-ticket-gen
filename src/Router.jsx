@@ -17,13 +17,13 @@ const Router = () => {
   return (
     <div className="
       font-inconsolata relative text-neutral-0 min-h-dvh bg-dark-900
-      px-4 pt-12 pb-20
+      px-4 py-10
       flex items-center justify-center overflow-x-hidden
       bg-background-mobile bg-no-repeat bg-right-bottom bg-contain
       md:bg-background-tablet lg:bg-background-desktop
     ">
       { loading && <Loading /> }
-      <div className="w-full lg:pb-0 sm:w-[90%] lg:w-[60%]">
+      <div className="w-full sm:w-[90%] lg:w-[60%]">
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />

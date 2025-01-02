@@ -23,15 +23,18 @@ const Home = () => {
         profilePhoto,
 
         // errors
-        nameErr,
-        emailErr,
-        githubErr,
-        photoErr,
         setPhotoErr,
         setNameErr,
         setEmailErr,
+        setInvalidEmailErr,
         setGithubErr,
     } = useConfStore();
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
 
     const goToTicketPage = () => {
         setLoading(true);
@@ -54,9 +57,10 @@ const Home = () => {
         if (profilePhoto === "") setPhotoErr(true);
         if (fullName === "") setNameErr(true);
         if (email === "") setEmailErr(true);
+        else if(!isValidEmail(email)) setInvalidEmailErr(true);
         if (githubUsername === "") setGithubErr(true);
 
-        if (profilePhoto !== "" && fullName !== "" && githubUsername !== "" && email !== "") {
+        if (profilePhoto !== "" && fullName !== "" && githubUsername !== "" && email !== "" && isValidEmail(email)) {
             goToTicketPage();
         }
     }
