@@ -3,8 +3,6 @@ import { create } from "zustand"
 export const useConfStore = create((set, get) => ({
   profilePhoto: "",
   setProfilePhoto: (profilePhoto) => set({ profilePhoto }),
-  photoErr: false,
-  setPhotoErr: (value) => set({ photoErr: value }),
   photoTooLarge: false,
   setPhotoTooLarge: (value) => set({ photoTooLarge: value }),
 

@@ -8,13 +8,12 @@ const AddNewPhoto = () => {
 
     const {
         setProfilePhoto,
+        errors,
         photoTooLarge,
         setPhotoTooLarge,
-        photoErr,
-        setPhotoErr,
     } = useConfStore();
 
-    const borderColor = photoTooLarge || photoErr ? "border-orange-500" : "border-neutral-500";
+    const borderColor = photoTooLarge || errors["photo"] ? "border-orange-500" : "border-neutral-500";
 
     return (
         <div className="w-full">
@@ -34,7 +33,6 @@ const AddNewPhoto = () => {
                                 setPhotoTooLarge(true);
                                 e.target.value = ""; // Clear the input
                             } else {
-                                setPhotoErr(false);
                                 setPhotoTooLarge(false);
                                 setProfilePhoto(file);
                             }
@@ -49,7 +47,7 @@ const AddNewPhoto = () => {
                 </label>
             </div>
             {
-                !photoTooLarge && !photoErr ? (
+                !photoTooLarge && !errors["photo"] ? (
                     <div className="flex items-center justify-start gap-2 mt-2 text-neutral-300 text-preset-7">
                         <span><img src={info} alt="info icon" className="w-5" /></span>
                         <span>Upload your photo (JPG or PNG, max size: 500KB).</span>

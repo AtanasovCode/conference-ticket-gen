@@ -7,7 +7,6 @@ const PhotoInput = () => {
 
     const {
         profilePhoto,
-        errors,
     } = useConfStore();
 
     return (
