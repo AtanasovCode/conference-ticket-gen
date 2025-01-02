@@ -58,22 +58,6 @@ export default {
         'radius-24': '1.5rem',   // 24px
         'radius-full': '999px',  // Full radius
       },
-      spacing: {
-        'spacing-0': '0px',        // 0
-        'spacing-025': '0.125rem', // 2px
-        'spacing-050': '0.25rem',  // 4px
-        'spacing-075': '0.375rem', // 6px
-        'spacing-100': '0.5rem',   // 8px
-        'spacing-150': '0.75rem',  // 12px
-        'spacing-200': '1rem',     // 16px
-        'spacing-250': '1.25rem',  // 20px
-        'spacing-300': '1.5rem',   // 24px
-        'spacing-400': '2rem',     // 32px
-        'spacing-500': '2.5rem',   // 40px
-        'spacing-600': '3rem',     // 48px
-        'spacing-800': '4rem',     // 64px
-        'spacing-1000': '5rem',    // 80px
-      },
       backgroundImage: {
         'gradient-01': "linear-gradient(90deg, #F37362 0%, #FFF 100%)",
 
