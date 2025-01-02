@@ -4,7 +4,7 @@ Generate your ticket for the next big coding conference 2025!
 
 ### Design
 
-![](./src/assets/screenshots/preview-pages.jpg)
+![](./src/assets/screenshots/preview.jpg)
 
 # Features List
 
