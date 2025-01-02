@@ -35,3 +35,11 @@ Generate your ticket for the next big coding conference 2025!
 ### Ticket 
 
 ![](./src/assets/screenshots/ticket.png)
+
+### Built with
+
+- Vite
+- Reactjs
+- Zustand - for state management
+- TailwindCSS - for styling
+- React Router v7 - for navigation
