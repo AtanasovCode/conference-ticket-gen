@@ -1,8 +1,12 @@
 
 import { BrowserRouter, Routes, Route } from "react-router";
 import { useConfStore } from "../useConfStore";
+
+// background images
 import squigglyLineTop from './assets/images/pattern-squiggly-line-top.svg';
 import squigglyLineBottom from './assets/images/pattern-squiggly-line-bottom.svg';
+import circle from './assets/images/pattern-circle.svg';
+import linePattern from './assets/images/pattern-lines.svg';
 
 // routes
 import Home from "./routes/Home";
@@ -22,7 +26,7 @@ const Router = () => {
       bg-background-mobile bg-no-repeat bg-right-bottom bg-contain
       md:bg-background-tablet lg:bg-background-desktop
     ">
-      { loading && <Loading /> }
+      {loading && <Loading />}
       <div className="w-full sm:w-[90%] lg:w-[60%]">
         <BrowserRouter>
           <Routes>
@@ -36,6 +40,12 @@ const Router = () => {
         </div>
         <div className="w-[90%] absolute bottom-0 left-0 sm:w-[70%] md:w-[45%] z-[0]">
           <img src={squigglyLineBottom} alt="" className="w-full" />
+        </div>
+        <div className="w-[20%] absolute bottom-[10%] right-[10%] z-[0]">
+          <img src={circle} alt="" className="w-full" />
+        </div>
+        <div className="w-full h-full  lg:w-[90%] lg:h-[90%] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[0]">
+          <img src={linePattern} alt="" className="w-full" />
         </div>
       </div>
     </div>
