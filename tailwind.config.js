@@ -35,6 +35,7 @@ export default {
         'transparent-black': "rgba(0, 0, 0, .6)",
         'dark-900': "#020114",
         neutral: {
+          900: "#0D082D",
           700: "#4B4869",
           500: "#8784A5",
           300: "#D1D0D5",
@@ -92,8 +93,8 @@ export default {
     keyframes: {
       'dot-load': {
         '0%': { transform: 'translateY(0)' },
-        '50%': { transform: 'translateY(30px)' },
-        '100%': { transform: 'translateY(-30px)' },
+        '50%': { transform: 'translateY(25px)' },
+        '100%': { transform: 'translateY(-25px)' },
       }
     },
   },

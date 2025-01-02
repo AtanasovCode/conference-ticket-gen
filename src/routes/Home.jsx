@@ -53,7 +53,7 @@ const Home = () => {
                     <input
                         type="button"
                         value="Generate Ticket"
-                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-orange-500 text-preset-5-extrabold font-extrabold text-neutral-900 p-6"
+                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-orange-500 hover:bg-orange-700 text-preset-5-extrabold font-extrabold text-neutral-900 p-4"
                         onClick={() => verifyInputs()}
                     />
                 </div>
@@ -61,7 +61,7 @@ const Home = () => {
                     <input
                         type="button"
                         value="Generate Example Ticket"
-                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-slate-800 border border-orange-500 text-preset-5-extrabold font-extrabold text-neutral-300 p-6"
+                        className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-slate-800 border border-orange-500 hover:border-orange-700 text-preset-5-extrabold font-extrabold text-neutral-300 p-4"
                         onClick={() => generateExampleTicket()}
                     />
                 </div>

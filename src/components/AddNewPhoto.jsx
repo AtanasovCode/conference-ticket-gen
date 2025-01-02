@@ -19,11 +19,11 @@ const AddNewPhoto = () => {
         <div className="w-full">
             <div
                 className={`w-full relative bg-faded-white border-2 border-dashed ${borderColor} rounded-radius-12 
-                flex flex-col items-center justify-center gap-4 p-6`}
+                flex flex-col items-center justify-center gap-4 p-6 cursor-pointer`}
             >
                 <input
                     type="file"
-                    className="absolute w-full h-full opacity-0"
+                    className="absolute w-full h-full opacity-0 cursor-pointer"
                     accept=".jpg,.jpeg,.png,.webp"
                     onChange={(e) => {
                         const file = e.target.files[0]; // Get the selected file

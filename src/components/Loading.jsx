@@ -10,7 +10,7 @@ const Loading = () => {
             <div className="text-preset-4 font-extrabold">
                 Loading...
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-2">
                 <LoadingDot delay={-0.3} />
                 <LoadingDot delay={-0.5} />
                 <LoadingDot delay={-0.7} />
