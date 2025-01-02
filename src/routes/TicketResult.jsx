@@ -1,7 +1,7 @@
 import { useConfStore } from "../../useConfStore";
 import Ticket from "../components/Ticket";
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/images/logo-mark.svg';
 
 const TicketResult = () => {
     const {
