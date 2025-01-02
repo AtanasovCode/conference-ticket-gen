@@ -36,6 +36,10 @@ Generate your ticket for the next big coding conference 2025!
 
 ![](./src/assets/screenshots/ticket.png)
 
+### Live Preview
+
+Preview the site -> [coding conf](https://conf-ticket-gen.netlify.app)
+
 ### Built with
 
 - Vite
