@@ -12,41 +12,35 @@ const Inputs = () => {
         setFullName,
         setEmail,
         setGithubUsername,
-
-        // errors
-        nameErr,
-        photoErr,
-        emailErr,
-        invalidEmailErr,
-        githubErr,
+        
+        errors,
     } = useConfStore();
 
     return (
         <div className="w-full flex flex-col items-center justify-center gap-10 z-50">
             <PhotoInput
-                err={photoErr}
+                err={errors["photo"]}
                 errMsg="Please upload a valid photo."
             />
             <TextInput
                 name="Full Name"
                 value={fullName}
                 updateValue={setFullName}
-                err={nameErr}
+                err={errors["name"]}
                 errMsg="Full Name is required."
             />
             <TextInput
                 name="Email Address"
                 value={email}
                 updateValue={setEmail}
-                err={emailErr}
-                invalidEmailErr={invalidEmailErr}
+                err={errors["email"] || errors["invalidEmail"]}
                 errMsg="Please enter a valid email address."
             />
             <TextInput
                 name="Github Username"
                 value={githubUsername}
                 updateValue={setGithubUsername}
-                err={githubErr}
+                err={errors["username"]}
                 errMsg="Please provide a valid GitHub username."
             />
         </div>

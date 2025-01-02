@@ -17,23 +17,8 @@ const Home = () => {
         setGithubUsername,
         setLoading,
 
-        fullName,
-        email,
-        githubUsername,
-        profilePhoto,
-
-        // errors
-        setPhotoErr,
-        setNameErr,
-        setEmailErr,
-        setInvalidEmailErr,
-        setGithubErr,
+        checkInputs,
     } = useConfStore();
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 
 
     const goToTicketPage = () => {
@@ -53,14 +38,8 @@ const Home = () => {
         goToTicketPage();
     };
 
-    const checkInputs = () => {
-        if (profilePhoto === "") setPhotoErr(true);
-        if (fullName === "") setNameErr(true);
-        if (email === "") setEmailErr(true);
-        else if(!isValidEmail(email)) setInvalidEmailErr(true);
-        if (githubUsername === "") setGithubErr(true);
-
-        if (profilePhoto !== "" && fullName !== "" && githubUsername !== "" && email !== "" && isValidEmail(email)) {
+    const verifyInputs = () => {
+        if (checkInputs()) {
             goToTicketPage();
         }
     }
@@ -75,7 +54,7 @@ const Home = () => {
                         type="button"
                         value="Generate Ticket"
                         className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-orange-500 text-preset-5-extrabold font-extrabold text-neutral-900 p-6"
-                        onClick={() => checkInputs()}
+                        onClick={() => verifyInputs()}
                     />
                 </div>
                 <div className="w-full flex items-center justify-center">
@@ -83,9 +62,7 @@ const Home = () => {
                         type="button"
                         value="Generate Example Ticket"
                         className="w-full z-50 rounded-radius-12 text-center cursor-pointer bg-slate-800 border border-orange-500 text-preset-5-extrabold font-extrabold text-neutral-300 p-6"
-                        onClick={() => {
-                            generateExampleTicket();
-                        }}
+                        onClick={() => generateExampleTicket()}
                     />
                 </div>
             </div>

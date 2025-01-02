@@ -24,7 +24,6 @@ const TextInput = ({
                     className={`w-full bg-faded-white rounded-radius-12 border ${borderColor} p-4`}
                 />
                 {err && <ErrorMessage message={errMsg} />}
-                {invalidEmailErr && <ErrorMessage message={errMsg} />}
             </div>
         </div>
     );
